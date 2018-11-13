@@ -5,8 +5,9 @@ CREATE TABLE [dbo].[userChats]
 [commentDate] [datetime] NOT NULL,
 [senderId] [int] NOT NULL,
 [receiverId] [int] NOT NULL,
-[messageStatus] [bit] NULL
-) ON [PRIMARY]
+[messageStatus] [bit] NULL,
+[txtType] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+)
 GO
-ALTER TABLE [dbo].[userChats] ADD CONSTRAINT [PK_userChats] PRIMARY KEY CLUSTERED  ([userChatId]) ON [PRIMARY]
+ALTER TABLE [dbo].[userChats] ADD CONSTRAINT [PK_userChats] PRIMARY KEY CLUSTERED  ([userChatId])
 GO
